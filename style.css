@@ -16,12 +16,11 @@ body {
   top: 2%;
   z-index: 100;
   padding: 1rem;
-  /* border: 2px solid red; */
   right: 2%;
   background: whitesmoke;
 }
 
-.navbar i{
+.navbar i {
   color: darkslateblue;
 }
 
@@ -30,10 +29,10 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type=date]:required:invalid::-webkit-datetime-edit {
+input[type="date"]:required:invalid::-webkit-datetime-edit {
   color: transparent;
 }
-input[type=date]:focus::-webkit-datetime-edit {
+input[type="date"]:focus::-webkit-datetime-edit {
   color: black !important;
 }
 
@@ -147,6 +146,7 @@ input[type=date]:focus::-webkit-datetime-edit {
   );
   background-position: 0;
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 4s infinite linear;
   animation-fill-mode: forwards;
@@ -158,13 +158,12 @@ input[type=date]:focus::-webkit-datetime-edit {
 /* ************************************* HALL INTRODUCTION ************************************* */
 
 .intro {
-  height: 100vh;
+  height: 100%;
   width: 90%;
-  margin: 0 auto;
+  margin: 10% auto;
 }
 
 .hall-info {
-  margin: 10% auto;
   padding: 2rem;
 }
 
@@ -174,8 +173,8 @@ input[type=date]:focus::-webkit-datetime-edit {
   justify-content: center;
   align-items: center;
   width: fit-content;
-  margin: 0 auto;
-  gap: 2rem;
+  margin: auto;
+  gap: 1rem;
   font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -205,11 +204,11 @@ input[type=date]:focus::-webkit-datetime-edit {
 /* ************************************* SLIDER ************************************* */
 
 .slider-container {
-
   height: 100vh;
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .items {
@@ -339,10 +338,9 @@ input[type=date]:focus::-webkit-datetime-edit {
 /* ************************************* GALLERY ************************************* */
 
 .gallery-page {
-
-  height: 100vh;
+  height: 100%;
   width: 90%;
-  margin: 0 auto;
+  margin: 10% auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,9 +372,9 @@ input[type=date]:focus::-webkit-datetime-edit {
 /* ************************************* PROCEEDINGS ************************************* */
 
 .proceedings {
-  height: 100vh;
+  height: 100%;
   width: 90%;
-  margin: 5% auto;
+  margin: 10% auto;
 }
 
 .cards {
@@ -388,27 +386,26 @@ input[type=date]:focus::-webkit-datetime-edit {
   width: 40%;
   opacity: 0;
 }
-.proceedings.in-view .card:nth-child(1){
+.proceedings.in-view .card:nth-child(1) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-fill-mode: backwards;
 }
-.proceedings.in-view .card:nth-child(2){
+.proceedings.in-view .card:nth-child(2) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
-.proceedings.in-view .card:nth-child(3){
+.proceedings.in-view .card:nth-child(3) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-delay: 1s;
   animation-fill-mode: backwards;
 }
-
 
 .card div {
   font-family: "Cinzel", serif;
@@ -444,14 +441,14 @@ input[type=date]:focus::-webkit-datetime-edit {
 /* ************************************* HIGHLIGHTS ************************************* */
 
 .highlights {
-  height: 100vh;
+  height: 100%;
   width: 90%;
-  margin: 0 auto;
+  margin: 10% auto;
 }
 
 .highlights-info {
-  width: 90%;
-  height: 60%;
+  /* width: 90%; */
+  /* height: 60%; */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -466,32 +463,36 @@ input[type=date]:focus::-webkit-datetime-edit {
   opacity: 0;
 }
 
-.highlights.in-view .highlight:nth-child(1){
+.highlights.in-view .highlight:nth-child(1) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-fill-mode: backwards;
 }
-.highlights.in-view .highlight:nth-child(2){
+.highlights.in-view .highlight:nth-child(2) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
-.highlights.in-view .highlight:nth-child(3){
+.highlights.in-view .highlight:nth-child(3) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-delay: 1s;
   animation-fill-mode: backwards;
 }
-.highlights.in-view .highlight:nth-child(4){
+.highlights.in-view .highlight:nth-child(4) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-delay: 1.5s;
   animation-fill-mode: backwards;
+}
+
+.icon {
+  width: 20%;
 }
 
 .icon i {
@@ -511,11 +512,10 @@ input[type=date]:focus::-webkit-datetime-edit {
 /* ************************************* CONTACT FORM ************************************* */
 
 .contact-form {
-  height: 100vh;
+  height: 100%;
   width: 90%;
-  margin: 0 auto;
+  margin: 10% auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  /* padding: 2rem; */
 }
 
 .contact-form > p {
@@ -675,7 +675,6 @@ footer {
   align-items: center;
 }
 
-
 .flex {
   display: flex;
   gap: 1rem;
@@ -697,9 +696,8 @@ footer {
   opacity: 0;
 }
 
-
-.contacts>div:hover p{
-text-decoration: underline;
+.contacts > div:hover p {
+  text-decoration: underline;
 }
 
 .contacts.in-view {
@@ -735,7 +733,7 @@ text-decoration: underline;
   animation-delay: 2s;
 }
 
-.end{
+.end {
   width: 100%;
   position: absolute;
   bottom: 5%;
@@ -743,36 +741,16 @@ text-decoration: underline;
   justify-content: space-between;
 }
 
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
 }
 
 /* ************************************* MEDIA QUERIES ************************************* */
 
-@media only screen and (min-width: 1441px) {
-  .intro {
-    height: 100%;
-  }
-  .slider-container {
-    margin-top: 20%;
-    height: 100%;
-  }
-  .gallery-page {
-    margin-top: 20%;
-    height: 100%;
-  }
-  .proceedings {
-    height: 100%;
-  }
-  .highlights {
-    height: 100%;
-  }
-  .contact-form {
-    margin-top: 20%;
-    height: 100%;
-  }
-}
 @media only screen and (max-width: 1440px) {
   .items .item {
     width: 350px;
@@ -793,12 +771,7 @@ a, a:hover, a:focus, a:active {
     animation: none;
     background: whitesmoke;
     background-clip: text;
-  }
-  .description {
-    font-size: medium;
-  }
-  .slider-container {
-    overflow: hidden;
+    -webkit-background-clip: text;
   }
 
   .items .item {
@@ -821,10 +794,10 @@ a, a:hover, a:focus, a:active {
     gap: 5rem;
   }
   .card {
-    width: 80%;
+    width: 60%;
     margin: auto;
   }
-  .card div p{
+  .card div p {
     font-size: x-large;
   }
   .card div span {
@@ -835,11 +808,14 @@ a, a:hover, a:focus, a:active {
   }
   .highlights-info {
     flex-direction: column;
-    gap: 2rem;
+    /* gap: 2rem; */
   }
   .highlight {
-    margin: auto;
+    gap: 0px;
+    /* margin: auto; */
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
   .icon i {
     font-size: 5rem;
@@ -866,16 +842,25 @@ a, a:hover, a:focus, a:active {
   .form-button {
     width: 50%;
   }
-  
 }
 
 /* Small devices such as phones (768px or lesser) */
 @media only screen and (max-width: 768px) {
+  .navbar p{
+    font-size: small;
+  }
   .intro {
     height: 100%;
   }
+  .hall-info {
+    padding: 0;
+  }
   .head {
     font-size: 1.5rem;
+  }
+  .description {
+    font-size: 1rem;
+    line-height: 1rem;
   }
   .content p {
     font-size: medium;
@@ -885,6 +870,28 @@ a, a:hover, a:focus, a:active {
     animation: none;
     background: whitesmoke;
     background-clip: text;
+    -webkit-background-clip: text;
+  }
+  .items .item {
+    width: 250px;
+    height: 250px;
+  }
+  .card {
+    width: 80%;
+  }
+  .highlight {
+    gap: 0.5rem;
+  }
+  .highlight-decs p:nth-child(1) {
+    text-align: none;
+    font-size: 1rem;
+  }
+  .highlight-decs .description {
+    display: none;
+  }
+  .icon i {
+    font-size: 3rem;
+    -webkit-text-stroke: 0px white;
   }
   .contact-details {
     margin-top: 1rem;
@@ -912,11 +919,11 @@ a, a:hover, a:focus, a:active {
   .contact-details {
     font-size: medium;
   }
-  .end{
+  .end {
     flex-direction: column;
     gap: 1rem;
   }
-  .end p{
+  .end p {
     font-size: small;
   }
   .contacts {
@@ -931,7 +938,7 @@ a, a:hover, a:focus, a:active {
 /* Small devices such as phones (375px or lesser) */
 @media only screen and (max-width: 375px) {
   .head {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .content p {
     font-size: large;
@@ -941,23 +948,30 @@ a, a:hover, a:focus, a:active {
     animation: none;
     background: whitesmoke;
     background-clip: text;
+    -webkit-background-clip: text;
   }
   .description {
     font-size: small;
   }
+  .items .item {
+    width: 200px;
+    height: 200px;
+  }
   .card {
     width: 100%;
   }
-  .card div p{
+  .card div p {
     font-size: larger;
   }
-  .icon{
-    display: none;
+  .icon i {
+    font-size: 2rem;
+    -webkit-text-stroke: 0px white;
+    /* display: none; */
   }
-  .highlight-decs {
+  /* .highlight-decs {
     text-align: center;
     width: 100%;
-  }
+  } */
 }
 /* ************************************* ANIMATIONS ************************************* */
 
