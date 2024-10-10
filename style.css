@@ -41,7 +41,6 @@ input[type="date"]:focus::-webkit-datetime-edit {
   color: black !important;
 }
 
-
 /* ************************************* MAIN PAGE ************************************* */
 
 .main {
@@ -216,7 +215,7 @@ input[type="date"]:focus::-webkit-datetime-edit {
   overflow: hidden;
 }
 
-.slider-main{
+.slider-main {
   margin-top: 10%;
   height: 400px;
 }
@@ -373,7 +372,7 @@ input[type="date"]:focus::-webkit-datetime-edit {
   opacity: 0;
 }
 
-.card .description{
+.card .description {
   margin-top: 1rem;
 }
 .proceedings.in-view .card:nth-child(1) {
@@ -562,7 +561,6 @@ input[type="date"]:focus::-webkit-datetime-edit {
   pointer-events: none;
   transition: 0.2s;
 }
-
 
 .login-box .user-box input:focus ~ label,
 .login-box .user-box input:valid ~ label {
@@ -850,7 +848,7 @@ a:active {
 
 /* Small devices such as phones (768px or lesser) */
 @media only screen and (max-width: 768px) {
-  .navbar p{
+  .navbar p {
     font-size: small;
   }
   .intro {
@@ -898,7 +896,7 @@ a:active {
     gap: 0.5rem;
   }
 
-  .highlights-info{
+  .highlights-info {
     margin-top: -5%;
   }
 
@@ -996,16 +994,20 @@ a:active {
     width: 30px;
     height: 30px;
   }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   .card {
     width: 100%;
   }
   .card div p {
     font-size: larger;
   }
-  .highlights-info{
+  .highlights-info {
     margin-top: -10%;
   }
-  .slider-main{
+  .slider-main {
     height: 300px;
   }
   .icon i {
@@ -1015,7 +1017,7 @@ a:active {
   .contact-details {
     font-size: small;
   }
-  .end p{
+  .end p {
     font-size: smaller;
   }
 }
