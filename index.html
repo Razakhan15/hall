@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -12,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Document</title>
+    <title>BeskarBanquet</title>
   </head>
   <body>
     <div class="navbar">
@@ -62,30 +61,32 @@
         <p>events</p>
         <span class="animate"></span>
       </div>
-      <div class="items">
-        <div class="item active">
-          <img src="img/2.jpeg" />
-          <p>wedding</p>
-        </div>
-        <div class="item next">
-          <img src="img/1.jpg" />
-          <p>reception</p>
-        </div>
-        <div class="item">
-          <img src="img/3.jpg" />
-          <p>engagement</p>
-        </div>
-        <div class="item">
-          <img src="img/4.jpg" />
-          <p>corporate events</p>
-        </div>
-        <div class="item prev">
-          <img src="img/5.jpg" />
-          <p>off-site events</p>
-        </div>
-        <div class="button-container">
-          <div class="button"><i class="fas fa-angle-left"></i></div>
-          <div class="button"><i class="fas fa-angle-right"></i></div>
+      <div class="slider-main">
+        <div class="items">
+          <div class="item active">
+            <img src="img/2.jpeg" />
+            <p>wedding</p>
+          </div>
+          <div class="item next">
+            <img src="img/1.jpg" />
+            <p>reception</p>
+          </div>
+          <div class="item">
+            <img src="img/3.jpg" />
+            <p>engagement</p>
+          </div>
+          <div class="item">
+            <img src="img/4.jpg" />
+            <p>corporate events</p>
+          </div>
+          <div class="item prev">
+            <img src="img/5.jpg" />
+            <p>off-site events</p>
+          </div>
+          <div class="button-container">
+            <div class="button"><i class="fas fa-angle-left"></i></div>
+            <div class="button"><i class="fas fa-angle-right"></i></div>
+          </div>
         </div>
       </div>
     </section>
@@ -103,7 +104,6 @@
         <img src="img/hall6.jpg" alt="" />
         <img src="img/hall7.jfif" alt="" />
         <img src="img/hall8.jpg" alt="" />
-        <img src="img/hall9.webp" alt="" />
       </div>
     </section>
     <section class="proceedings animate">
@@ -135,7 +135,7 @@
         <div class="card">
           <div>
             <span>3</span>
-            <p>descriptionuss finishing touches</p>
+            <p>description finishing touches</p>
           </div>
           <p class="description">
             Finalize the menu one month before the event and confirm the final
@@ -208,7 +208,7 @@
         <form>
           <div class="user-box">
             <input type="text" required />
-            <label>Name <span>*</span></label>
+            <label>Name *</label>
           </div>
           <div class="user-box">
             <input
@@ -218,25 +218,36 @@
               maxlength="10"
               required
             />
-            <label>Phone <span>*</span></label>
+            <label>Phone *</label>
           </div>
           <div class="add-on flex">
             <div class="user-box">
               <input type="date" required />
-              <label>Date <span>*</span></label>
+              <label>Date *</label>
             </div>
             <div class="user-box">
-              <input type="text" required />
-              <label>Event <span>*</span></label>
+              <select name="shirt_color" required>
+                <option selected disabled>
+                  Reservation Time *
+                </option>
+                <option value="">Morning</option>
+                <option value="">Evening</option>
+              </select>
             </div>
             <div class="user-box">
-              <input type="number" min="0" required />
-              <label>Number of People <span>*</span></label>
+              <select name="shirt_color" required>
+                <option selected disabled>Event *</option>
+                <option value="">Wedding</option>
+                <option value="">Reception</option>
+                <option value="">Engagement</option>
+                <option value="">Corporate events</option>
+                <option value="">Off-site events</option>
+              </select>
             </div>
           </div>
           <div class="user-box">
             <input type="text" required />
-            <label>Message <span>*</span></label>
+            <label>Message *</label>
           </div>
           <div class="form-button">
             <button>send</button>
@@ -258,37 +269,36 @@
           <div class="contacts ani animate">
             <div class="flex">
               <i class="fa-solid fa-phone"></i>
-              <p>(+91) 74477 48820</p>
+              <a href="tel:74477 48820">(+91) 74477 48820</a>
             </div>
             <div class="flex">
               <i class="fa-solid fa-envelope"></i>
-              <p>beskar@gmail.com</p>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=beskarbanquet@gmail.com">beskar@gmail.com</a>
             </div>
             <div class="flex">
               <i class="fa-solid fa-location-dot"></i>
-              <p>Near Gramin Police Headquarter, New Pacha Peth, Solapur</p>
+              <a href="http://maps.google.co.uk/maps?q=17.6668881,75.9164152">Near Gramin Police Headquarter, New Pacha Peth, Solapur</a>
             </div>
           </div>
           <span class="animate"></span>
           <div class="social-media ani delay animate">
             <div class="flex">
               <i class="fa-brands fa-instagram"></i>
-              <p>instagram</p>
+              <a>instagram</a>
             </div>
             <div class="flex">
               <i class="fa-brands fa-facebook-f"></i>
-              <p>facebook</p>
+              <a>facebook</a>
             </div>
           </div>
         </div>
         <div class="end">
           <p>
-            © Copyrights <span id="year"></span> by CodexWorld. All rights
-            reserved.
+            © Copyrights <span id="year"></span> Beskar Banquet Hall.
           </p>
           <p>
             <a href="https://api.whatsapp.com/send?phone=+918208273304"
-              >Connect with Website Developer</a
+              >Contact Website Designer</a
             >
           </p>
         </div>

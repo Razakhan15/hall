@@ -8,6 +8,11 @@
 }
 
 body {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+  width: 100%;
   background-color: whitesmoke;
 }
 
@@ -35,6 +40,7 @@ input[type="date"]:required:invalid::-webkit-datetime-edit {
 input[type="date"]:focus::-webkit-datetime-edit {
   color: black !important;
 }
+
 
 /* ************************************* MAIN PAGE ************************************* */
 
@@ -204,13 +210,16 @@ input[type="date"]:focus::-webkit-datetime-edit {
 /* ************************************* SLIDER ************************************* */
 
 .slider-container {
-  height: 100vh;
+  height: 100%;
   position: relative;
-  width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
+.slider-main{
+  margin-top: 10%;
+  height: 400px;
+}
 .items {
   position: absolute;
   top: 50%;
@@ -229,7 +238,7 @@ input[type="date"]:focus::-webkit-datetime-edit {
   border-radius: 50%;
   overflow: hidden;
   transition: all 300ms ease-in-out;
-  z-index: -1;
+  z-index: 100;
   opacity: 0;
 }
 
@@ -240,32 +249,12 @@ input[type="date"]:focus::-webkit-datetime-edit {
   transform: translate(-50%);
   text-transform: uppercase;
   font-size: x-large;
-  transition: all 1s ease-in-out;
+  transition: all 0.2s linear;
   text-align: center;
   padding: 10px;
   color: black;
   background-color: whitesmoke;
   font-family: "Cinzel", serif;
-}
-
-.item p::before {
-  background: black;
-  content: "";
-  inset: 0;
-  position: absolute;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 1s ease-in-out;
-  z-index: -1;
-}
-
-.item.active:hover p::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-.item.active:hover p {
-  letter-spacing: 5px;
-  color: whitesmoke;
 }
 
 .item img {
@@ -340,15 +329,12 @@ input[type="date"]:focus::-webkit-datetime-edit {
 .gallery-page {
   height: 100%;
   width: 90%;
-  margin: 10% auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1vh;
   margin-inline: auto;
   max-width: 40rem;
@@ -385,6 +371,10 @@ input[type="date"]:focus::-webkit-datetime-edit {
 .card {
   width: 40%;
   opacity: 0;
+}
+
+.card .description{
+  margin-top: 1rem;
 }
 .proceedings.in-view .card:nth-child(1) {
   opacity: 1;
@@ -447,8 +437,6 @@ input[type="date"]:focus::-webkit-datetime-edit {
 }
 
 .highlights-info {
-  /* width: 90%; */
-  /* height: 60%; */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -512,10 +500,11 @@ input[type="date"]:focus::-webkit-datetime-edit {
 /* ************************************* CONTACT FORM ************************************* */
 
 .contact-form {
+  font-weight: 400;
   height: 100%;
   width: 90%;
   margin: 10% auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Cinzel", serif;
 }
 
 .contact-form > p {
@@ -549,6 +538,20 @@ input[type="date"]:focus::-webkit-datetime-edit {
   outline: none;
   background: transparent;
 }
+
+.login-box .user-box select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+  font-family: "Cinzel", serif;
+}
+
 .login-box .user-box label {
   position: absolute;
   top: 0;
@@ -560,11 +563,9 @@ input[type="date"]:focus::-webkit-datetime-edit {
   transition: 0.2s;
 }
 
-.login-box .user-box label span {
-  color: darkslateblue;
-}
 
-.login-box .user-box input:focus ~ label {
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
   font-size: 12px;
@@ -599,7 +600,6 @@ input[type="date"]:focus::-webkit-datetime-edit {
   height: 100vh;
   background-color: darkslateblue;
   width: 100%;
-  margin-top: 5%;
   font-family: "Cinzel", serif;
 }
 footer {
@@ -696,7 +696,8 @@ footer {
   opacity: 0;
 }
 
-.contacts > div:hover p {
+.contacts > div:hover a {
+  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -716,6 +717,12 @@ footer {
   opacity: 1;
   animation: 2s anim-lineUp ease-out;
 }
+
+.social-media > div:hover a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .ani.in-view {
   animation-duration: 0.7s;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
@@ -739,6 +746,7 @@ footer {
   bottom: 5%;
   display: flex;
   justify-content: space-between;
+  font-size: medium;
 }
 
 a,
@@ -780,10 +788,6 @@ a:active {
   }
   .item.active p {
     font-size: large;
-  }
-  .gallery-page {
-    height: 100%;
-    flex-direction: column;
   }
   .proceedings {
     height: 100%;
@@ -860,7 +864,8 @@ a:active {
   }
   .description {
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
+    font-weight: 100;
   }
   .content p {
     font-size: medium;
@@ -876,12 +881,27 @@ a:active {
     width: 250px;
     height: 250px;
   }
+  .items .button-container {
+    width: 200px;
+  }
+  .button-container .button {
+    font-size: 20px;
+  }
+  .button-container .button:before {
+    width: 40px;
+    height: 40px;
+  }
   .card {
     width: 80%;
   }
   .highlight {
     gap: 0.5rem;
   }
+
+  .highlights-info{
+    margin-top: -5%;
+  }
+
   .highlight-decs p:nth-child(1) {
     text-align: none;
     font-size: 1rem;
@@ -917,7 +937,9 @@ a:active {
     width: 100%;
   }
   .contact-details {
+    top: 30%;
     font-size: medium;
+    gap: 2rem;
   }
   .end {
     flex-direction: column;
@@ -925,6 +947,9 @@ a:active {
   }
   .end p {
     font-size: small;
+  }
+  .name {
+    height: 20%;
   }
   .contacts {
     width: 100%;
@@ -937,6 +962,9 @@ a:active {
 }
 /* Small devices such as phones (375px or lesser) */
 @media only screen and (max-width: 375px) {
+  .box {
+    height: 30%;
+  }
   .head {
     font-size: 1rem;
   }
@@ -952,10 +980,21 @@ a:active {
   }
   .description {
     font-size: small;
+    font-weight: 100;
   }
   .items .item {
     width: 200px;
     height: 200px;
+  }
+  .items .button-container {
+    width: 150px;
+  }
+  .button-container .button {
+    font-size: 15px;
+  }
+  .button-container .button:before {
+    width: 30px;
+    height: 30px;
   }
   .card {
     width: 100%;
@@ -963,15 +1002,22 @@ a:active {
   .card div p {
     font-size: larger;
   }
+  .highlights-info{
+    margin-top: -10%;
+  }
+  .slider-main{
+    height: 300px;
+  }
   .icon i {
     font-size: 2rem;
     -webkit-text-stroke: 0px white;
-    /* display: none; */
   }
-  /* .highlight-decs {
-    text-align: center;
-    width: 100%;
-  } */
+  .contact-details {
+    font-size: small;
+  }
+  .end p{
+    font-size: smaller;
+  }
 }
 /* ************************************* ANIMATIONS ************************************* */
 
