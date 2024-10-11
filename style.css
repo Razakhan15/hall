@@ -50,7 +50,7 @@ input[type="date"]:focus::-webkit-datetime-edit {
 }
 
 .bg-img {
-  background-image: url("./img/hall6.jpg");
+  background-image: url("./img/hall6.jpeg");
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -250,7 +250,7 @@ input[type="date"]:focus::-webkit-datetime-edit {
   font-size: x-large;
   transition: all 0.2s linear;
   text-align: center;
-  padding: 10px;
+  padding: 0.5rem;
   color: black;
   background-color: whitesmoke;
   font-family: "Cinzel", serif;
@@ -375,20 +375,20 @@ input[type="date"]:focus::-webkit-datetime-edit {
 .card .description {
   margin-top: 1rem;
 }
-.proceedings.in-view .card:nth-child(1) {
+.cards.in-view .card:nth-child(1) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-fill-mode: backwards;
 }
-.proceedings.in-view .card:nth-child(2) {
+.cards.in-view .card:nth-child(2) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
-.proceedings.in-view .card:nth-child(3) {
+.cards.in-view .card:nth-child(3) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
@@ -450,27 +450,27 @@ input[type="date"]:focus::-webkit-datetime-edit {
   opacity: 0;
 }
 
-.highlights.in-view .highlight:nth-child(1) {
+.highlights-info.in-view .highlight:nth-child(1) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-fill-mode: backwards;
 }
-.highlights.in-view .highlight:nth-child(2) {
+.highlights-info.in-view .highlight:nth-child(2) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
-.highlights.in-view .highlight:nth-child(3) {
+.highlights-info.in-view .highlight:nth-child(3) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
   animation-delay: 1s;
   animation-fill-mode: backwards;
 }
-.highlights.in-view .highlight:nth-child(4) {
+.highlights-info.in-view .highlight:nth-child(4) {
   opacity: 1;
   animation: 1s anim-lineUp ease-out;
   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
@@ -664,7 +664,7 @@ footer {
 .contact-details {
   position: absolute;
   top: 40%;
-  font-size: larger;
+  font-size: large;
   width: 100%;
   height: 40%;
   justify-content: space-between;
@@ -744,7 +744,7 @@ footer {
   bottom: 5%;
   display: flex;
   justify-content: space-between;
-  font-size: medium;
+  font-size: small;
 }
 
 a,
@@ -859,6 +859,7 @@ a:active {
   }
   .head {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
   .description {
     font-size: 1rem;
@@ -921,7 +922,7 @@ a:active {
     display: none;
   }
   .social-media {
-    display: block;
+    align-items: start;
   }
   .name div p:nth-child(1) {
     font-size: 3rem;
@@ -944,7 +945,7 @@ a:active {
     gap: 1rem;
   }
   .end p {
-    font-size: small;
+    font-size: smaller;
   }
   .name {
     height: 20%;
@@ -959,7 +960,7 @@ a:active {
   }
 }
 /* Small devices such as phones (375px or lesser) */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 425px) {
   .box {
     height: 30%;
   }
@@ -980,9 +981,16 @@ a:active {
     font-size: small;
     font-weight: 100;
   }
+  .cards {
+    margin-top: 5rem;
+  }
   .items .item {
     width: 200px;
     height: 200px;
+  }
+  .item.active p {
+    padding: 0.5rem;
+    font-size: small;
   }
   .items .button-container {
     width: 150px;
@@ -1016,9 +1024,6 @@ a:active {
   }
   .contact-details {
     font-size: small;
-  }
-  .end p {
-    font-size: smaller;
   }
 }
 /* ************************************* ANIMATIONS ************************************* */
