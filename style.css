@@ -41,6 +41,19 @@ input[type="date"]:focus::-webkit-datetime-edit {
   color: black !important;
 }
 
+input[type="text"]
+{
+  font-family: "Cinzel", serif;
+}
+input[type="number"]
+{
+  font-family: "Cinzel", serif;
+}
+input[type="date"]
+{
+  font-family: "Cinzel", serif;
+}
+
 /* ************************************* MAIN PAGE ************************************* */
 
 .main {
