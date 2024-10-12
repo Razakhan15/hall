@@ -204,14 +204,15 @@
         look forward to speaking with you soon!
       </p>
       <div class="login-box">
-        <form>
+        <form action="https://formsubmit.co/razask2003@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Enquiry About The Hall">
           <div class="user-box">
-            <input type="text" required />
+            <input type="text" name="Name" required />
             <label>Name *</label>
           </div>
           <div class="user-box">
             <input
-              type="number"
+            name="Phone_Number"
               oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
               type="number"
               maxlength="10"
@@ -221,18 +222,18 @@
           </div>
           <div class="add-on flex">
             <div class="user-box">
-              <input type="date" required />
+              <input type="Date" name="date" required />
               <label>Date *</label>
             </div>
             <div class="user-box">
-              <select name="shirt_color" required>
+              <select name="Reservation_Time" required>
                 <option selected disabled>Reservation Time *</option>
                 <option value="">Morning</option>
                 <option value="">Evening</option>
               </select>
             </div>
             <div class="user-box">
-              <select name="shirt_color" required>
+              <select name="Event" required>
                 <option selected disabled>Event *</option>
                 <option value="">Wedding</option>
                 <option value="">Reception</option>
@@ -242,12 +243,13 @@
               </select>
             </div>
           </div>
+          <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5501/thankyou.html"> -->
           <div class="user-box">
-            <input type="text" required />
+            <input type="text" name="Message" required />
             <label>Message *</label>
           </div>
           <div class="form-button">
-            <button>send</button>
+            <button type="submit">send</button>
           </div>
         </form>
       </div>
